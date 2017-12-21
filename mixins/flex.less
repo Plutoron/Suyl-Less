@@ -1,0 +1,26 @@
+.flex(@direction: row; @item: center; @content: center; ){
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+
+    flex-direction: @direction;
+    flex-direction: ~'-webkit-@{direction}';
+    flex-direction: ~'-moz-@{direction}';
+    
+    .align-items(@item);
+    .justify-content(@content)
+}
+
+
+.align-items(@item){
+    align-items: @item;
+    align-items: ~'-webkit-@{item}';
+    align-items: ~'-moz-@{item}';
+}
+
+.justify-content(@content){
+    justify-content: @content;
+    justify-content: ~'-webkit-@{content}';
+    justify-content: ~'-moz-@{content}';
+}
+
